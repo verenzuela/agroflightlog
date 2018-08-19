@@ -1,0 +1,26 @@
+{
+  "name": "agroflightlog",
+  "version": "0.0.1",
+  "description": "bower packages need to use agroflightlog",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "verenzuela@gmail.com"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "holderjs": "^2.9.4",
+    "popper.js": "^1.14.3",
+    "jquery": "^3.3.1",
+    "admin-lte":"^2.4.8"
+  }
+}
