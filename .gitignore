@@ -6,6 +6,7 @@
 /public/bower_components
 /public/font-awesome-4.7.0
 /public/jquery-validation-1.17.0
+/public/package-lock.json	
 /vendor
 /.idea
 /.vscode
