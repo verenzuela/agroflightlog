@@ -9,6 +9,18 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+|Route::resource('users', 'UsersController');
+|
+|Verb    Path                        Action  Route Name
+|GET     /users                      index   users.index
+|GET     /users/create               create  users.create
+|POST    /users                      store   users.store
+|GET     /users/{user}               show    users.show
+|GET     /users/{user}/edit          edit    users.edit
+|PUT     /users/{user}               update  users.update
+|DELETE  /users/{user}               destroy users.destroy
+|
+|
 */
 
 	Route::auth();
@@ -40,16 +52,9 @@
 		});
 
 
-
 		//FLIGHTS
-		Route::prefix('/flights')->group(function ()
-		{
-			Route::get('/list', 'App\FlightsController@list')->name('flights.list');
-
-			Route::get('/new', 'App\FlightsController@new')->name('flights.new');
-			
-		});
-
+		Route::resource('/flights', 'App\FlightsController')
+			;//->middleware(['permission:country-list']);
 
 
 		//ADMIN

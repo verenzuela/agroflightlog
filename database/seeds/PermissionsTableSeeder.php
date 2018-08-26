@@ -28,6 +28,11 @@ class PermissionsTableSeeder extends Seeder
 			['name' => 'permission-create','display_name' => 'Permission - Create','description' => 'Permission create role'],
 			['name' => 'permission-edit','display_name' => 'Permission - Edit','description' => 'Edit permission edit'],
 			['name' => 'permission-delete','display_name' => 'Permission - Delete','description' => 'Permission delete option'],
+
+			['name' => 'flights-list','display_name' => 'flights - Listing flights','description' => 'flights listing display option'],
+			['name' => 'flights-create','display_name' => 'flights - Create','description' => 'flights create role'],
+			['name' => 'flights-edit','display_name' => 'flights - Edit','description' => 'Edit flights edit'],
+			['name' => 'flights-delete','display_name' => 'flights - Delete','description' => 'flights delete option'],
 			
 			
 		];

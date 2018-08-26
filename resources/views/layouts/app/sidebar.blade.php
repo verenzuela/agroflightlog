@@ -51,10 +51,10 @@
         </a>
         <ul class="treeview-menu">
           <li class="{{ substr($parseUrl['path'], 0, 13) === '/flights/list' ? 'active' : '' }}">
-            <a href="{{ route('flights.list') }}"><i class="fa fa-list"></i> <span>My Flights</span></a>
+            <a href="{{ route('flights.index') }}"><i class="fa fa-list"></i> <span>My Flights</span></a>
           </li>
           <li class="{{ substr($parseUrl['path'], 0, 12) === '/flights/new' ? 'active' : '' }}">
-            <a href="{{ route('flights.new') }}"><i class="fa fa-plus-square-o"></i> <span>Cretae</span></a>
+            <a href="{{ route('flights.create') }}"><i class="fa fa-plus-square-o"></i> <span>Cretae</span></a>
           </li>
           
         </ul>
