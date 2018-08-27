@@ -69,12 +69,17 @@ class FlightsController extends Controller
 
             	$this->validate($request, static::$rules, static::$customMessages);
 
+                $hours = floor($request['flight_time'] / 3600);
+                $mins = floor($request['flight_time'] / 60 % 60);
+                $secs = floor($request['flight_time'] % 60);
+                $timeFormat = sprintf('%02d:%02d:%02d', $hours, $mins, $secs);
+                
             	$flight = new Flight;
 
             	$flight->drone_id 	= $request['drone_id'];
             	$flight->id_user 	= Auth::user()->id;
             	$flight->date 		= date('Y-m-d', strtotime(str_replace('/', '-', $request['date'])));
-            	$flight->time 		= $request['flight_time'];
+            	$flight->time 		= $timeFormat;
             	$flight->type 		= $request['fligth_type'];
             	$flight->condition 	= $request['fligth_condition'];
             	$flight->latitude 	= $request['latitude'];
