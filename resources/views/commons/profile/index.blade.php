@@ -22,7 +22,7 @@
                     rules: {
                         password: {
                             required: true,
-                            minlength: 6
+                            minlength: 5
                         },
                         new_password: {
                             required: true,
