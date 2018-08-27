@@ -75,13 +75,13 @@
                     <div class="col-md-3 mb-3">
                         <dl>
                             <dt>Fligth Type</dt>
-                            <dd>{{ $flight->fligth_type }}</dd>
+                            <dd>{{ $flight->type }}</dd>
                         </dl>
                     </div>
                     <div class="col-md-3 mb-3">
                         <dl>
                             <dt>Fligth Condition (D/N)</dt>
-                            <dd>{{ $flight->fligth_condition }}</dd>
+                            <dd>{{ $flight->condition }}</dd>
                         </dl>
                     </div>
 
