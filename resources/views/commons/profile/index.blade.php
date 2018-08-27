@@ -81,12 +81,22 @@
                     </div>
                 @endif
 
-                @if ($message = Session::get('errors'))
-                    <div class="alert alert-error">
-                        <p>{{ $message }}</p>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
                     </div>
+                @else
+                    @if ($message = Session::get('error'))
+                        <div class="alert alert-error">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif
                 @endif
-
                 
 
                 <div class="row">

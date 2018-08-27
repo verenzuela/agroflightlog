@@ -104,7 +104,7 @@ class ProfileController extends Controller
                 $user = User::findOrFail($id);
 
                 $this->validate($request, [
-                    'password' => 'min:6',
+                    'password' => 'min:5',
                     'new_password' => 'min:6',
                 ]);
 
@@ -115,7 +115,8 @@ class ProfileController extends Controller
                                 ->with('success','Password updated successfully');
 
                 } else {
-                    return redirect()->route('profile.view')->with('errors', 'Current password does not match');
+                    return redirect()->route('profile.view')->with('error', 'Current password does not match');
+                    //return response()->json(['old_password'=> ["Your old password is not correct."] ], 403);
                 }
 
 
